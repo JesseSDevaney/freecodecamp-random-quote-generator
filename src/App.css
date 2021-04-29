@@ -1,0 +1,114 @@
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  --quote-font: monospace;
+}
+
+#quote-box {
+  max-width: 800px;
+  width: 80vw;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 1px 0px 0px 0px rgb(0 0 0 / 10%), 2px 1px 10px 0px rgb(0 0 0 / 20%), -1px 0px 0px 0px rgb(0 0 0 / 10%), -2px 1px 10px 0px rgb(0 0 0 / 20%);
+  background-color: rgba(255, 255, 255, 60%);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+#text {
+  position: relative;
+  text-align: center;
+  font-family: monospace;
+  font-size: 2rem;
+  padding: 0 10px;
+  animation: bottom_to_top 1.5s ease;
+}
+
+#author {
+  position: relative;
+  font-size: 1rem;
+  animation: bottom_to_top 1.5s ease;
+}
+
+@keyframes bottom_to_top {
+  from {
+    top: 400px;
+  }
+  to {
+    top: 0px;
+  }
+}
+
+#quote-interactive {
+  width: 100%;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#new-quote {
+  margin: 5px;
+  padding: 1rem 3rem;
+  border: 1px;
+  border-radius: 10px;
+  transition: box-shadow 0.3s, background-color 0.3s, color 0.1s;
+  cursor: pointer;
+}
+
+#new-quote:hover {
+  color: white;
+  background-color: rgb(32, 175, 244);
+  box-shadow: 2px 1px 10px 0px rgb(0 0 0 / 10%), -2px 1px 10px 0px rgb(0 0 0 / 10%);
+}
+
+#new-quote:focus {
+  outline: none;
+}
+
+#tweet-quote {
+  text-decoration: none;
+  padding: 0.8rem;
+  margin: 10px;
+  max-width: 70px;
+  text-align: center;
+  color: white;
+  background-color: rgb(8, 160, 233);
+  border-radius: 15px;
+  transition: box-shadow 0.3s, background-color 0.3s;
+}
+
+#tweet-quote:hover {
+  background-color: rgb(32, 175, 244);
+  box-shadow: 2px 1px 10px 0px rgb(0 0 0 / 10%), -2px 1px 10px 0px rgb(0 0 0 / 10%);
+}
+
+
+@media (max-width: 500px) {
+  #text {
+    font-size: 1.7rem;
+    padding: 0 10px;
+  }
+
+  #author {
+    font-size: 1.1rem;
+  }
+
+  #quote-interactive {
+    flex-direction: column;
+  }
+
+  #new-quote {
+    margin-top: 1rem;
+    width: 100%;
+  }
+
+  #tweet-quote {
+    margin: 10px 20px;
+    align-self: flex-start;
+  }
+}
