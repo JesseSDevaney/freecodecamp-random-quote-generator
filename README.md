@@ -8,5 +8,5 @@ View the live project in my **Codepen:** [Random Quote Generator](https://codepe
 
 ## License
 
-Copyright (c) 2021 Jesse S Devaney <jessesdevaney@gmail.com>  
+Copyright (c) 2021 Jesse S. Devaney  
 MIT License
